@@ -1,0 +1,4 @@
+# hide dirs with large files
+data_preprocessed/*
+glove/*
+domain_specific_emb/*
