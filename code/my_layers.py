@@ -127,26 +127,26 @@ class Self_attention(Layer):
         return mask
 
     def call(self, input_tensor, mask):
-        x = input_tensor[0]
-        gold_opinion = input_tensor[1]
-        predict_opinion = input_tensor[2]
-        gold_prob = input_tensor[3]
-        mask = mask[0]
+        x = input_tensor[0]                     # polarity_output
+        gold_opinion = input_tensor[1]          # true expression == batch[2] but expanded to label dim.
+        predict_opinion = input_tensor[2]       # softmax(target_/expression_output)[:,:,1:].sum(dim=-1) 
+        gold_prob = input_tensor[3]             # batch[5]
+        mask = mask[0]                   # what is mask?
         assert mask is not None
 
-        x_tran = K.dot(x, self.W)
+        x_tran = K.dot(x, self.W)               # multiply weights
         if self.bias:
-            x_tran += self.b 
+            x_tran += self.b                    # add bias
 
-        x_transpose = K.permute_dimensions(x, (0,2,1))
-        weights = K.batch_dot(x_tran, x_transpose)
+        x_transpose = K.permute_dimensions(x, (0,2,1))  # transpose
+        weights = K.batch_dot(x_tran, x_transpose)  # query x keys
 
-     
+        # 1 / |i - j| distance awareness
         location = np.abs(np.tile(np.array(range(self.steps)), (self.steps,1)) - np.array(range(self.steps)).reshape(self.steps,1))
         loc_weights = 1.0 / (location+K.epsilon())
         loc_weights *= K.cast((location!=0), K.floatx())
         weights *= loc_weights
-
+        
         if self.use_opinion:
             gold_opinion_ = gold_opinion[:,:,1]+gold_opinion[:,:,2]
             predict_opinion_ = predict_opinion[:,:,3]+predict_opinion[:,:,4]
