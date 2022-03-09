@@ -1,0 +1,52 @@
+Starting job 35967 on gpu-2 at Wed Mar 9 11:39:35 CET 2022
+
+Using TensorFlow backend.
+Creating vocab ...
+  165152 total words, 25089 unique words
+ keep the top 20000 words
+Unknown words in train: 21400.00 
+Total words in train: 144408.00 
+Unknown words in test: 3326.00 
+Total words in test: 21883.00 
+
+------------------ Data statistics -----------------
+Training: #sentence 8632, #target 5042, #opinion term 8108, target polarity count: {'neg': 1539, 'neu': 0, 'pos': 3503, 'conf': 0}
+Test: #sentence 1272, #target 735, #opinion term 1206, target polarity count: {'neg': 208, 'neu': 0, 'pos': 527, 'conf': 0}
+
+Building model ...
+
+
+
+Input layer
+Word embedding layer
+Shared CNN layer 0
+before: sentence_output_1.shape=
+Traceback (most recent call last):
+  File "train.py", line 248, in <module>
+    aspect_model, doc_model = create_model(args, vocab, nb_class, overall_maxlen, doc_maxlen_1, doc_maxlen_2)
+  File "/fp/homes01/u01/ec-pmhalvor/nlp/msc/imn/code/model.py", line 128, in create_model
+    print "before: sentence_output_1.shape=", sentence_output_1.shape
+UnboundLocalError: local variable 'sentence_output_1' referenced before assignment
+
+Task and CPU usage stats:
+JobID           JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+35967        allocation          1                                             00:00:00      1:0 
+35967.batch       batch          1        1   00:00:02          0   00:00:02   00:00:03      1:0 
+35967.extern     extern          1        1   00:00:00          0   00:00:00   00:00:03      0:0 
+
+Memory usage stats:
+JobID            MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+35967                                                                            
+35967.batch        212K          0       212K        0              0          0 
+35967.extern          0          0          0        0              0          0 
+
+Disk usage stats:
+JobID         MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+35967                                                                                                 
+35967.batch             0               0              0            0                0              0 
+35967.extern        0.01M               0          0.01M            0                0              0 
+
+Job 35967 completed at Wed Mar 9 11:39:38 CET 2022

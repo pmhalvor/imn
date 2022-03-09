@@ -1,0 +1,26 @@
+Starting job 35965 on gpu-2 at Wed Mar 9 11:34:47 CET 2022
+
+/var/spool/slurmd/job35965/slurm_script: line 24: pip: command not found
+
+Task and CPU usage stats:
+JobID           JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+35965        allocation          1                                             00:00:00    127:0 
+35965.batch       batch          1        1   00:00:00          0   00:00:00   00:00:01    127:0 
+35965.extern     extern          1        1   00:00:00          0   00:00:00   00:00:01      0:0 
+
+Memory usage stats:
+JobID            MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+35965                                                                            
+35965.batch        132K          0       132K        0              0          0 
+35965.extern          0          0          0        0              0          0 
+
+Disk usage stats:
+JobID         MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+35965                                                                                                 
+35965.batch             0               0              0            0                0              0 
+35965.extern        0.01M               0          0.01M            0                0              0 
+
+Job 35965 completed at Wed Mar 9 11:34:48 CET 2022

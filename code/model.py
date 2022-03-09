@@ -127,7 +127,11 @@ def create_model(args, vocab, nb_class, overall_maxlen, doc_maxlen_1, doc_maxlen
 
             sentence_output_1 = conv_1(sentence_output)
             sentence_output_2 = conv_2(sentence_output)
+            print "before: sentence_output_1.shape=", sentence_output_1.shape
+            print "before: sentence_output_2.shape=", sentence_output_2.shape
+            print "before: sentence_output.shape=", sentence_output.shape
             sentence_output = Concatenate()([sentence_output_1, sentence_output_2])
+            print "after: sentence_output.shape=", sentence_output.shape
 
             if args.use_doc:
 
@@ -218,7 +222,7 @@ def create_model(args, vocab, nb_class, overall_maxlen, doc_maxlen_1, doc_maxlen
         print 'Interaction number ', i
         aspect_output = sentence_output
         sentiment_output = sentence_output
-        # note that the aspect-level data will also go through the doc-level models
+        # note that the aspet-level data will also go through the doc-level models
         doc_senti_output = sentence_output
         doc_domain_output = sentence_output
 
@@ -273,11 +277,10 @@ def create_model(args, vocab, nb_class, overall_maxlen, doc_maxlen_1, doc_maxlen
         else:
             # update sentence_output for the next iteration
             sentence_output = Concatenate()([sentence_output, aspect_probs, sentiment_probs])
-
         
-        print 'Before final encoding ', sentence_output.shape
+        print "shape before reencoding: ", sentence_output.shape
         sentence_output = enc(sentence_output)
-        print 'After final encoding ', sentence_output.shape
+        print "shape after reencoding: ", sentence_output.shape
 
     aspect_model = Model(inputs=[sentence_input, op_label_input, p_gold_op], outputs=[aspect_probs, sentiment_probs])
 

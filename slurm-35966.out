@@ -1,0 +1,26 @@
+Starting job 35966 on gpu-2 at Wed Mar 9 11:38:21 CET 2022
+
+/var/spool/slurmd/job35966/slurm_script: line 29: domain: unbound variable
+
+Task and CPU usage stats:
+JobID           JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+35966        allocation          1                                             00:00:00      1:0 
+35966.batch       batch          1        1   00:00:00          0   00:00:00   00:00:01      1:0 
+35966.extern     extern          1        1   00:00:00          0   00:00:00   00:00:01      0:0 
+
+Memory usage stats:
+JobID            MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+35966                                                                            
+35966.batch        132K          0       132K        0              0          0 
+35966.extern          0          0          0        0              0          0 
+
+Disk usage stats:
+JobID         MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+35966                                                                                                 
+35966.batch             0               0              0            0                0              0 
+35966.extern        0.01M               0          0.01M            0                0              0 
+
+Job 35966 completed at Wed Mar 9 11:38:22 CET 2022

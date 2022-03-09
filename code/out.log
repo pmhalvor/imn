@@ -2105,3 +2105,178 @@
 2022-01-03 15:10:31,382 INFO Epoch 64, train: 318s
 2022-01-03 15:10:55,812 INFO Validation results -- [Aspect f1]: 0.3660, [Opinion f1]: 0.2363, [Sentiment acc]: 0.7664, [Sentiment f1]: 0.4274, [Overall f1]: 0.2805
 2022-01-03 15:11:13,051 INFO Test results -- [Aspect f1]: 0.3170, [Opinion f1]: 0.2613, [Sentiment acc]: 0.7794, [Sentiment f1]: 0.4401, [Overall f1]: 0.2471
+2022-03-09 10:04:10,029 INFO ----------------------------------  New Run ----------------------------------
+2022-03-09 10:04:10,045 INFO Arguments:
+2022-03-09 10:04:10,046 INFO   algorithm: adam
+2022-03-09 10:04:10,046 INFO   aspect_layers: 2
+2022-03-09 10:04:10,046 INFO   batch_size: 32
+2022-03-09 10:04:10,046 INFO   cnn_dim: 300
+2022-03-09 10:04:10,046 INFO   command: train.py --domain norec_fine
+2022-03-09 10:04:10,046 INFO   doc_domain_layers: 0
+2022-03-09 10:04:10,046 INFO   doc_senti_layers: 0
+2022-03-09 10:04:10,046 INFO   domain: norec_fine
+2022-03-09 10:04:10,046 INFO   dropout_prob: 0.5
+2022-03-09 10:04:10,046 INFO   emb_dim: 400
+2022-03-09 10:04:10,046 INFO   epochs: 80
+2022-03-09 10:04:10,046 INFO   interactions: 2
+2022-03-09 10:04:10,046 INFO   mr: 2
+2022-03-09 10:04:10,046 INFO   pre_epochs: 5
+2022-03-09 10:04:10,046 INFO   seed: 123
+2022-03-09 10:04:10,046 INFO   senti_layers: 0
+2022-03-09 10:04:10,046 INFO   shared_layers: 2
+2022-03-09 10:04:10,046 INFO   train_op: 1
+2022-03-09 10:04:10,046 INFO   use_doc: 0
+2022-03-09 10:04:10,046 INFO   use_domain_emb: 0
+2022-03-09 10:04:10,053 INFO   use_opinion: 1
+2022-03-09 10:04:10,053 INFO   validation_ratio: 0.2
+2022-03-09 10:04:10,053 INFO   vocab_size: 20000
+2022-03-09 10:06:47,008 INFO ----------------------------------  New Run ----------------------------------
+2022-03-09 10:06:47,009 INFO Arguments:
+2022-03-09 10:06:47,009 INFO   algorithm: adam
+2022-03-09 10:06:47,009 INFO   aspect_layers: 2
+2022-03-09 10:06:47,009 INFO   batch_size: 32
+2022-03-09 10:06:47,009 INFO   cnn_dim: 300
+2022-03-09 10:06:47,009 INFO   command: train.py --domain norec_fine --embdim 200 --use-domain-emb 1
+2022-03-09 10:06:47,009 INFO   doc_domain_layers: 0
+2022-03-09 10:06:47,009 INFO   doc_senti_layers: 0
+2022-03-09 10:06:47,009 INFO   domain: norec_fine
+2022-03-09 10:06:47,009 INFO   dropout_prob: 0.5
+2022-03-09 10:06:47,009 INFO   emb_dim: 200
+2022-03-09 10:06:47,009 INFO   epochs: 80
+2022-03-09 10:06:47,009 INFO   interactions: 2
+2022-03-09 10:06:47,009 INFO   mr: 2
+2022-03-09 10:06:47,009 INFO   pre_epochs: 5
+2022-03-09 10:06:47,009 INFO   seed: 123
+2022-03-09 10:06:47,009 INFO   senti_layers: 0
+2022-03-09 10:06:47,009 INFO   shared_layers: 2
+2022-03-09 10:06:47,009 INFO   train_op: 1
+2022-03-09 10:06:47,009 INFO   use_doc: 0
+2022-03-09 10:06:47,009 INFO   use_domain_emb: 1
+2022-03-09 10:06:47,010 INFO   use_opinion: 1
+2022-03-09 10:06:47,010 INFO   validation_ratio: 0.2
+2022-03-09 10:06:47,010 INFO   vocab_size: 20000
+2022-03-09 10:06:49,021 INFO Unknown words in train: 21400.00 
+2022-03-09 10:06:49,021 INFO Total words in train: 144408.00 
+2022-03-09 10:06:49,303 INFO Unknown words in test: 3326.00 
+2022-03-09 10:06:49,303 INFO Total words in test: 21883.00 
+2022-03-09 10:06:49,947 INFO Building model ...
+2022-03-09 10:06:50,414 INFO Initializing lookup table
+2022-03-09 10:06:59,648 INFO 9458/20003 word vectors initialized by general embeddings (hit rate: 47.28%)
+2022-03-09 10:06:59,648 INFO 14567/20003 word vectors initialized by domain embeddings (hit rate: 72.82%)
+2022-03-09 10:06:59,667 INFO   Done
+2022-03-09 10:06:59,713 INFO --------------------------------------------------------------------------------------------------------------------------
+2022-03-09 10:19:41,699 INFO Epoch 0, train: 761s
+2022-03-09 10:20:41,209 INFO Validation results -- [Aspect f1]: 0.0000, [Opinion f1]: 0.0305, [Sentiment acc]: 0.0000, [Sentiment f1]: 0.0000, [Overall f1]: 0.0000
+2022-03-09 10:21:25,005 INFO Test results -- [Aspect f1]: 0.0000, [Opinion f1]: 0.0325, [Sentiment acc]: 0.0000, [Sentiment f1]: 0.0000, [Overall f1]: 0.0000
+2022-03-09 10:34:04,908 INFO Epoch 1, train: 759s
+2022-03-09 10:35:04,257 INFO Validation results -- [Aspect f1]: 0.0429, [Opinion f1]: 0.0869, [Sentiment acc]: 0.7727, [Sentiment f1]: 0.2906, [Overall f1]: 0.0331
+2022-03-09 10:35:48,068 INFO Test results -- [Aspect f1]: 0.0266, [Opinion f1]: 0.0842, [Sentiment acc]: 0.8000, [Sentiment f1]: 0.2963, [Overall f1]: 0.0212
+2022-03-09 10:49:28,196 INFO ----------------------------------  New Run ----------------------------------
+2022-03-09 10:49:28,198 INFO Arguments:
+2022-03-09 10:49:28,198 INFO   algorithm: adam
+2022-03-09 10:49:28,198 INFO   aspect_layers: 2
+2022-03-09 10:49:28,198 INFO   batch_size: 32
+2022-03-09 10:49:28,198 INFO   cnn_dim: 300
+2022-03-09 10:49:28,198 INFO   command: train.py --domain norec_fine --embdim 200 --use-domain-emb 1
+2022-03-09 10:49:28,198 INFO   doc_domain_layers: 0
+2022-03-09 10:49:28,198 INFO   doc_senti_layers: 0
+2022-03-09 10:49:28,198 INFO   domain: norec_fine
+2022-03-09 10:49:28,198 INFO   dropout_prob: 0.5
+2022-03-09 10:49:28,198 INFO   emb_dim: 200
+2022-03-09 10:49:28,198 INFO   epochs: 80
+2022-03-09 10:49:28,198 INFO   interactions: 2
+2022-03-09 10:49:28,198 INFO   mr: 2
+2022-03-09 10:49:28,198 INFO   pre_epochs: 5
+2022-03-09 10:49:28,198 INFO   seed: 123
+2022-03-09 10:49:28,198 INFO   senti_layers: 0
+2022-03-09 10:49:28,198 INFO   shared_layers: 2
+2022-03-09 10:49:28,198 INFO   train_op: 1
+2022-03-09 10:49:28,198 INFO   use_doc: 0
+2022-03-09 10:49:28,198 INFO   use_domain_emb: 1
+2022-03-09 10:49:28,198 INFO   use_opinion: 1
+2022-03-09 10:49:28,198 INFO   validation_ratio: 0.2
+2022-03-09 10:49:28,198 INFO   vocab_size: 20000
+2022-03-09 10:49:29,947 INFO Unknown words in train: 21400.00 
+2022-03-09 10:49:29,947 INFO Total words in train: 144408.00 
+2022-03-09 10:49:30,152 INFO Unknown words in test: 3326.00 
+2022-03-09 10:49:30,152 INFO Total words in test: 21883.00 
+2022-03-09 10:49:30,681 INFO Building model ...
+2022-03-09 10:49:31,145 INFO Initializing lookup table
+2022-03-09 10:49:40,332 INFO 9458/20003 word vectors initialized by general embeddings (hit rate: 47.28%)
+2022-03-09 10:49:40,332 INFO 14567/20003 word vectors initialized by domain embeddings (hit rate: 72.82%)
+2022-03-09 10:49:40,352 INFO   Done
+2022-03-09 10:49:40,389 INFO --------------------------------------------------------------------------------------------------------------------------
+2022-03-09 11:02:21,280 INFO Epoch 0, train: 760s
+2022-03-09 11:03:20,757 INFO Validation results -- [Aspect f1]: 0.0000, [Opinion f1]: 0.0305, [Sentiment acc]: 0.0000, [Sentiment f1]: 0.0000, [Overall f1]: 0.0000
+2022-03-09 11:04:04,528 INFO Test results -- [Aspect f1]: 0.0000, [Opinion f1]: 0.0325, [Sentiment acc]: 0.0000, [Sentiment f1]: 0.0000, [Overall f1]: 0.0000
+2022-03-09 11:16:43,534 INFO Epoch 1, train: 759s
+2022-03-09 11:17:42,885 INFO Validation results -- [Aspect f1]: 0.0429, [Opinion f1]: 0.0869, [Sentiment acc]: 0.7727, [Sentiment f1]: 0.2906, [Overall f1]: 0.0331
+2022-03-09 11:18:26,685 INFO Test results -- [Aspect f1]: 0.0266, [Opinion f1]: 0.0842, [Sentiment acc]: 0.8000, [Sentiment f1]: 0.2963, [Overall f1]: 0.0212
+2022-03-09 11:31:05,708 INFO Epoch 2, train: 759s
+2022-03-09 11:32:05,096 INFO Validation results -- [Aspect f1]: 0.0757, [Opinion f1]: 0.0974, [Sentiment acc]: 0.7500, [Sentiment f1]: 0.2857, [Overall f1]: 0.0568
+2022-03-09 11:32:48,869 INFO Test results -- [Aspect f1]: 0.0596, [Opinion f1]: 0.1144, [Sentiment acc]: 0.8261, [Sentiment f1]: 0.3016, [Overall f1]: 0.0492
+2022-03-09 11:39:36,451 INFO ----------------------------------  New Run ----------------------------------
+2022-03-09 11:39:36,453 INFO Arguments:
+2022-03-09 11:39:36,453 INFO   algorithm: adam
+2022-03-09 11:39:36,453 INFO   aspect_layers: 2
+2022-03-09 11:39:36,453 INFO   batch_size: 32
+2022-03-09 11:39:36,453 INFO   cnn_dim: 300
+2022-03-09 11:39:36,453 INFO   command: train.py --domain norec_fine --embdim 200 --use-domain-emb 1
+2022-03-09 11:39:36,453 INFO   doc_domain_layers: 0
+2022-03-09 11:39:36,453 INFO   doc_senti_layers: 0
+2022-03-09 11:39:36,453 INFO   domain: norec_fine
+2022-03-09 11:39:36,453 INFO   dropout_prob: 0.5
+2022-03-09 11:39:36,453 INFO   emb_dim: 200
+2022-03-09 11:39:36,453 INFO   epochs: 80
+2022-03-09 11:39:36,453 INFO   interactions: 2
+2022-03-09 11:39:36,453 INFO   mr: 2
+2022-03-09 11:39:36,453 INFO   pre_epochs: 5
+2022-03-09 11:39:36,453 INFO   seed: 123
+2022-03-09 11:39:36,453 INFO   senti_layers: 0
+2022-03-09 11:39:36,453 INFO   shared_layers: 2
+2022-03-09 11:39:36,453 INFO   train_op: 1
+2022-03-09 11:39:36,453 INFO   use_doc: 0
+2022-03-09 11:39:36,453 INFO   use_domain_emb: 1
+2022-03-09 11:39:36,453 INFO   use_opinion: 1
+2022-03-09 11:39:36,454 INFO   validation_ratio: 0.2
+2022-03-09 11:39:36,454 INFO   vocab_size: 20000
+2022-03-09 11:39:37,381 INFO Unknown words in train: 21400.00 
+2022-03-09 11:39:37,381 INFO Total words in train: 144408.00 
+2022-03-09 11:39:37,622 INFO Unknown words in test: 3326.00 
+2022-03-09 11:39:37,622 INFO Total words in test: 21883.00 
+2022-03-09 11:39:38,216 INFO Building model ...
+2022-03-09 11:41:31,491 INFO ----------------------------------  New Run ----------------------------------
+2022-03-09 11:41:31,492 INFO Arguments:
+2022-03-09 11:41:31,492 INFO   algorithm: adam
+2022-03-09 11:41:31,492 INFO   aspect_layers: 2
+2022-03-09 11:41:31,492 INFO   batch_size: 32
+2022-03-09 11:41:31,492 INFO   cnn_dim: 300
+2022-03-09 11:41:31,492 INFO   command: train.py --domain norec_fine --embdim 200 --use-domain-emb 1
+2022-03-09 11:41:31,492 INFO   doc_domain_layers: 0
+2022-03-09 11:41:31,492 INFO   doc_senti_layers: 0
+2022-03-09 11:41:31,492 INFO   domain: norec_fine
+2022-03-09 11:41:31,492 INFO   dropout_prob: 0.5
+2022-03-09 11:41:31,492 INFO   emb_dim: 200
+2022-03-09 11:41:31,492 INFO   epochs: 80
+2022-03-09 11:41:31,492 INFO   interactions: 2
+2022-03-09 11:41:31,492 INFO   mr: 2
+2022-03-09 11:41:31,492 INFO   pre_epochs: 5
+2022-03-09 11:41:31,492 INFO   seed: 123
+2022-03-09 11:41:31,493 INFO   senti_layers: 0
+2022-03-09 11:41:31,493 INFO   shared_layers: 2
+2022-03-09 11:41:31,493 INFO   train_op: 1
+2022-03-09 11:41:31,493 INFO   use_doc: 0
+2022-03-09 11:41:31,493 INFO   use_domain_emb: 1
+2022-03-09 11:41:31,493 INFO   use_opinion: 1
+2022-03-09 11:41:31,493 INFO   validation_ratio: 0.2
+2022-03-09 11:41:31,493 INFO   vocab_size: 20000
+2022-03-09 11:41:32,360 INFO Unknown words in train: 21400.00 
+2022-03-09 11:41:32,360 INFO Total words in train: 144408.00 
+2022-03-09 11:41:32,576 INFO Unknown words in test: 3326.00 
+2022-03-09 11:41:32,576 INFO Total words in test: 21883.00 
+2022-03-09 11:41:33,108 INFO Building model ...
+2022-03-09 11:41:33,594 INFO Initializing lookup table
+2022-03-09 11:41:42,807 INFO 9458/20003 word vectors initialized by general embeddings (hit rate: 47.28%)
+2022-03-09 11:41:42,808 INFO 14567/20003 word vectors initialized by domain embeddings (hit rate: 72.82%)
+2022-03-09 11:41:42,829 INFO   Done
+2022-03-09 11:41:42,854 INFO --------------------------------------------------------------------------------------------------------------------------

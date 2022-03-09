@@ -2,6 +2,7 @@
 data_preprocessed/*
 glove/*
 domain_specific_emb/*
+old-slurms/*
 
 
 # hide typical python files
